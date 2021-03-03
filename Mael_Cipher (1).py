@@ -10,17 +10,20 @@ Step 6. This is the encrypted message. Reverse the steps in order to decrypt the
 #The following function will be used to encrypt the message the user has provided.
 KEY_CONSTANT = "banana"
 def encryption_process(unencrypted_message, key):
-    for char in key:
-        key_number = ord(char)
-        numbered_key.append(key_number)
-    for num in message:
-        message_number = ord(num)
-        numbered_message.append(message_number)
-    # So far so good, there are no mistakes until here. This covers until step 3. The following is step 4 and on.\
-    for num in numbered_message:
-        n_e = num * (len(numbered_key) * num)
-        numbered_encryption.append(n_e)
-    print("The Encrypted Message is: " + str(numbered_encryption))
+    if len(unencrypted_message) > 10:
+        print("Please keep the message under 10 characters.")
+    else:
+        for char in key:
+            key_number = ord(char)
+            numbered_key.append(key_number)
+        for num in message:
+            message_number = ord(num)
+            numbered_message.append(message_number)
+        # So far so good, there are no mistakes until here. This covers until step 3. The following is step 4 and on.\
+        for num in numbered_message:
+            n_e = num * (len(numbered_key) * num)
+            numbered_encryption.append(n_e)
+        print("The Encrypted Message is: " + str(numbered_encryption))
 def introduction():
     print('\n' * 10)
     print("Hello! Welcome to Amaan's message cipher!")
