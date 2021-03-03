@@ -6,7 +6,8 @@ Step 3. Put together each numbeer so that they become a long string, for example
 Step 4. Convert the string into an integer and create a for loop that is the length of the key. Each time, it will multiply by the number of the letter in the key. For example: 096967230 times o = 14, it will become 1454508450
 Step 5. Convert the integer back to a alphabetical string. I will convert every other number to its alphabetical parrallel. 
 Step 6. This is the encrypted message. Reverse the steps in order to decrypt the message """
-#Testing the coommit
+#Testing the commit
+#I'm forcing this commit so that I will be able to show my selection in Git
 #The following function will be used to encrypt the message the user has provided.
 KEY_CONSTANT = "banana"
 def encryption_process(unencrypted_message, key):
